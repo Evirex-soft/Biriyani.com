@@ -38,7 +38,7 @@ const Footer = () => {
                 title: "Hours",
                 content: [
                     "Mon - Sun",
-                    "11:00 AM - 11:00 PM"
+                    "11:30 AM - 11:00 PM"
                 ],
             },
             {
