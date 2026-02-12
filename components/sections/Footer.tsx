@@ -20,11 +20,26 @@ const Footer = () => {
         columns: [
             {
                 title: "Location",
-                content: ["128 West 9th St", "New York, NY 10011"],
+                content: [
+                    "Biriyani.Com Signature",
+                    "NMG Tower",
+                    "Vaikom Road",
+                    "Kannankulangara",
+                    "Tripunithura 682301"
+                ],
+            },
+            {
+                title: "Contact",
+                content: [
+                    "+91 7994537636",
+                ],
             },
             {
                 title: "Hours",
-                content: ["Tue - Sun", "17:00 - Late"],
+                content: [
+                    "Mon - Sun",
+                    "11:00 AM - 11:00 PM"
+                ],
             },
             {
                 title: "Socials",
@@ -79,10 +94,33 @@ const Footer = () => {
 
                             {/* Render simple text content */}
                             {col.content && (
-                                <div className="flex flex-col gap-1 text-sm uppercase tracking-widest leading-relaxed font-medium">
-                                    {col.content.map((line, i) => (
-                                        <p key={i}>{line}</p>
-                                    ))}
+                                <div className="text-sm leading-6">
+                                    {col.title === "Location" ? (
+                                        <>
+                                            <p className="text-sm md:text-base font-serif font-semibold mb-3 whitespace-nowrap">
+                                                {col.content[0]}
+                                            </p>
+
+                                            <div className="text-black/70 space-y-1">
+                                                {col.content.slice(1).map((line, i) => (
+                                                    <p key={i}>{line}</p>
+                                                ))}
+                                            </div>
+                                        </>
+                                    ) : col.title === "Contact" ? (
+                                        <a
+                                            href={`tel:${col.content[0]}`}
+                                            className="text-base font-medium tracking-wide hover:opacity-70 transition-opacity"
+                                        >
+                                            {col.content[0]}
+                                        </a>
+                                    ) : (
+                                        col.content.map((line, i) => (
+                                            <p key={i} className="text-black/70">
+                                                {line}
+                                            </p>
+                                        ))
+                                    )}
                                 </div>
                             )}
 
@@ -107,12 +145,10 @@ const Footer = () => {
             </div>
 
             {/* BOTTOM BAR */}
-            <div className="mt-24 md:mt-32 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-end md:items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold opacity-50">
+            <div className="mt-24 md:mt-32 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between md:items-center items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold opacity-50 text-center md:text-left">
                 <p>{siteConfig.bottom.copyright}</p>
-                <p className="hidden md:block">{siteConfig.bottom.tagline}</p>
 
-                {/* Mobile-only tagline moved to bottom right */}
-                <p className="md:hidden self-end">{siteConfig.bottom.tagline}</p>
+                <p>{siteConfig.bottom.tagline}</p>
             </div>
         </footer>
     );

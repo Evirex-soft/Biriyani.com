@@ -155,7 +155,7 @@ export default function Home() {
             <div className="md:col-span-4 flex flex-col gap-6">
               <div className="relative flex-1 overflow-hidden group">
                 <Image
-                  src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1663530761401-15eefb544889?q=80&w=880&auto=format&fit=crop"
                   alt="Detail" fill className="object-cover transition-transform duration-[2s] group-hover:scale-105"
                 />
               </div>
