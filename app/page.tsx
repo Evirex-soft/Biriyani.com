@@ -2,6 +2,7 @@
 "use client";
 import { Navbar } from "@/components/ui/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { OurStory } from "@/components/sections/OurStory";
 import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 import { useRef } from "react";
@@ -25,37 +26,52 @@ export default function Home() {
           <div className="relative aspect-3/4 md:aspect-4/5 overflow-hidden group">
             <div className="absolute inset-0 border border-[#cca43b]/20 z-10 m-4 transition-all duration-700 group-hover:m-0" />
             <Image
-              src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2670&auto=format&fit=crop"
+              src="/images/ext.jpg"
               alt="Chef Plating"
               fill
               className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
           </div>
 
-          <div className="space-y-12">
-            <span className="text-[#cca43b] text-xs uppercase tracking-[0.3em] pl-1 border-l border-[#cca43b]">Our Philosophy</span>
-            <h2 className="text-5xl md:text-7xl font-serif leading-[1.1] text-white">
-              Nature is our <br />
-              <span className="italic text-white/50">truest mentor.</span>
+          <div className="flex flex-col justify-center items-start space-y-8 max-w-xl">
+
+            <span className="text-[#cca43b] text-xs uppercase tracking-[0.3em] pl-3 border-l-2 border-[#cca43b]">
+              Our Philosophy
+            </span>
+
+            <h2 className="text-4xl md:text-6xl font-serif leading-tight text-white">
+              Where Heritage <br />
+              <span className="italic text-white/50">
+                Meets Mastery.
+              </span>
             </h2>
-            <p className="text-lg text-gray-400 font-light leading-relaxed max-w-md">
-              We believe that culinary excellence is found in the quiet intersection of
-              time-honored tradition and bold innovation. Our kitchen acts as a
-              laboratory of taste, elevating the humble into the extraordinary.
+
+            <p className="text-lg text-gray-400 font-light leading-relaxed">
+              We believe exceptional cuisine is born at the crossroads of authentic tradition and refined craftsmanship.
+              Every recipe we serve honors cultural roots while embracing contemporary technique.
+              Our kitchen is not just a place of preparation — it is a space where passion, precision, and premium ingredients come together to create memorable dining experiences.
             </p>
-            <button className="text-xs uppercase tracking-[0.25em] border-b border-white/30 pb-2 hover:border-[#cca43b] hover:text-[#cca43b] transition-all">
+
+            <a
+              href="#story"
+              className="text-xs uppercase tracking-[0.25em] border-b border-white/30 pb-2 hover:border-[#cca43b] hover:text-[#cca43b] transition-all"
+            >
               Read Our Story
-            </button>
+            </a>
+
           </div>
+
         </div>
       </section>
+
+      {/* Our Story */}
+      <OurStory />
 
       {/*  Featured Menu Item */}
       <section id="menu" className="py-20 border-y border-white/5 overflow-hidden relative">
         {/* Background decorative text */}
         <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full select-none pointer-events-none opacity-[0.03] whitespace-nowrap">
-          <span className="text-[20vw] font-serif italic pr-10">Malabar</span>
-          <span className="text-[20vw] font-serif italic pr-10">Signature</span>
+          <span className="text-[25vw] font-serif italic pr-10">Signature</span>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-end gap-10">
@@ -105,14 +121,16 @@ export default function Home() {
           </div>
 
           {/* Image Section */}
-          <div className="w-full md:w-105 h-125 relative mt-10 md:mt-0">
+          <div className="w-full md:w-162.5 h-87.5 md:h-125 relative mt-10 md:mt-0">
             <Image
-              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2574&auto=format&fit=crop"
+              src="/images/int.jpg"
               alt="Kerala Biriyani"
               fill
               className="object-cover"
             />
           </div>
+
+
         </div>
       </section>
 
@@ -130,19 +148,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[80vh]">
             <div className="md:col-span-8 relative overflow-hidden group">
               <Image
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop"
+                src="/images/ext1.jpg"
                 alt="Interior" fill className="object-cover transition-transform duration-[2s] group-hover:scale-105"
               />
             </div>
             <div className="md:col-span-4 flex flex-col gap-6">
               <div className="relative flex-1 overflow-hidden group">
                 <Image
-                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2670&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop"
                   alt="Detail" fill className="object-cover transition-transform duration-[2s] group-hover:scale-105"
                 />
               </div>
               <div className="bg-[#111] p-8 flex flex-col justify-center items-center text-center border border-white/5">
-                <p className="font-serif italic text-2xl mb-4">"A sanctuary of shadow and light."</p>
+                <p className="font-serif italic text-2xl mb-4">"Authentic flavors, unforgettable moments."</p>
                 <div className="w-8 h-px bg-[#cca43b]" />
               </div>
             </div>
